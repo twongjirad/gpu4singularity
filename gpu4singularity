@@ -268,7 +268,7 @@ fi
 _do_or_die "${BUILD_DIR}/NVIDIA-Linux-x86_64-${NVID_VER}.run --extract-only"
 
 # make links in nvidia directory
-_do_or_die "cd NVIDIA-Linux-x86_64-${NVID_VER}"
+_do_or_die "cd NVIDIA-Linux-x86_64-${NVID_VER}-diagnostic"
 _do_or_die "ln -s libEGL_nvidia.so.${NVID_VER}         libEGL_nvidia.so.0"
 _do_or_die "ln -s libGLESv1_CM_nvidia.so.${NVID_VER}   libGLESv1_CM_nvidia.so.1"
 _do_or_die "ln -s libGLESv2_nvidia.so.${NVID_VER}      libGLESv2_nvidia.so.2"
@@ -292,7 +292,7 @@ _do_or_die "ln -s libcuda.so.${NVID_VER}               libcuda.so.1"
 # move into place (overwrite old if exist)
 _do_or_die "cd .."
 _do_or_die "rm -rf /usr/local/nvidia"
-_do_or_die "mv NVIDIA-Linux-x86_64-${NVID_VER} /usr/local/nvidia"
+_do_or_die "mv NVIDIA-Linux-x86_64-${NVID_VER}-diagnostic /usr/local/nvidia"
 
 
 # set up /environment to use nvidia drivers and cuda
